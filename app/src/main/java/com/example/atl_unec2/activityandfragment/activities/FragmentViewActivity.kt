@@ -10,6 +10,9 @@ import com.example.atl_unec2.databinding.ActivityFragmentViewBinding
 import com.example.atl_unec2.activityandfragment.fragments.FirstFragment
 import com.example.atl_unec2.activityandfragment.fragments.ProductFragment
 import com.example.atl_unec2.activityandfragment.dialogs.OthersFragment
+import com.example.atl_unec2.activityandfragment.recyclerview.RecyclerViewFragment
+import com.example.atl_unec2.activityandfragment.recyclerview.ViewPagerFragment
+import com.example.atl_unec2.databinding.FragmentViewPagerBinding
 
 
 class FragmentViewActivity : AppCompatActivity() {
@@ -36,11 +39,11 @@ class FragmentViewActivity : AppCompatActivity() {
 //        fragmentTransaction.replace(R.id.fragment_container_view, productFragment)
 //        fragmentTransaction.commit()
 
+        val fragment=ViewPagerFragment()
 
         button1.setOnClickListener {
-
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container_view, otherFragment)
+                replace(R.id.fragment_container_view, fragment)
 //                addToBackStack(null)
                 commit()
 
