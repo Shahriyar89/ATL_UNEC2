@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+
+    <action
+        android:id="@+id/globalAction_to_ExampleFragment"
+        app:destination="@+id/settingFragment" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.atl_unec2.uicomponents.practical.practical7.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <deepLink
+            android:id="@+id/deeplinkHome"
+            android:autoVerify="true"
+            app:action="android.intent.action.MY_ACTION"
+            app:uri="atl://startDestination/" />
+
+
+        <action
+            android:id="@+id/action_homeFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.atl_unec2.uicomponents.fragments.ProductFragment"
+        android:label="ProductFragment">
+        <action
+            android:id="@+id/action_productFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <deepLink
+            android:id="@+id/productF"
+            android:autoVerify="true"
+            app:uri="atl://prFragment/" />
+
+        <argument
+            android:name="itemId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.atl_unec2.uicomponents.fragments.Example2Fragment"
+        android:label="ExampleFragment2">
+        <action
+            android:id="@+id/action_settingFragment_to_myFragment"
+            app:destination="@id/myFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/othersFragment"
+        android:name="com.example.atl_unec2.uicomponents.dialogs.OthersFragment"
+        android:label="fragment_others"
+        tools:layout="@layout/fragment_others" />
+
+    <fragment
+        android:id="@+id/myFragment"
+        android:name="com.example.atl_unec2.uicomponents.fragments.FirstFragment"
+        android:label="fragment_others"
+        tools:layout="@layout/fragment_first">
+        <deepLink
+            android:id="@+id/myFragmentDeeplink"
+            android:autoVerify="true"
+            app:uri="atl://firstFragment1/" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/myCustomDialog"
+        android:name="com.example.atl_unec2.uicomponents.dialogs.CustomDialogFragment"
+        android:label="Dialog"
+        tools:layout="@layout/fragment_custom_dialog" />
+
+    <include app:graph="@navigation/second_nav_graph" />
+
+</navigation>

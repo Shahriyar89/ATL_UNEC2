@@ -6,11 +6,11 @@
 
         <variable
             name="user"
-            type="com.example.atl_unec2.activityandfragment.fragments.UserInfo" />
+            type="com.example.atl_unec2.uicomponents.fragments.UserInfo" />
 
         <variable
             name="activity"
-            type="com.example.atl_unec2.activityandfragment.activities.SecondActivity" />
+            type="com.example.atl_unec2.uicomponents.activities.SecondActivity" />
 
         <import type="android.view.View" />
     </data>
@@ -20,7 +20,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activityandfragment.activities.SecondActivity">
+        tools:context=".uicomponents.activities.SecondActivity">
 
         <Button
             android:id="@+id/title"

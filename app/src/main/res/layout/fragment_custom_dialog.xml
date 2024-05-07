@@ -5,7 +5,7 @@
     android:layout_height="200dp"
     style="MyAlertDialog"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".activityandfragment.dialogs.CustomDialogFragment">
+    tools:context=".uicomponents.dialogs.CustomDialogFragment">
 
     <Button
         android:id="@+id/okay"

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="700dp"
-    tools:context=".activityandfragment.dialogs.CustomBottomSheetFragment">
+    tools:context=".uicomponents.dialogs.CustomBottomSheetFragment">
 
 
     <TextView
