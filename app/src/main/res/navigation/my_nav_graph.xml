@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/roomDbFragment">
 
 
     <action
@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.atl_unec2.uicomponents.practical.practical7.HomeFragment"
+        android:name="com.example.atl_unec2.uicomponents.viewmodels.viewmodel.SampleFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <deepLink
@@ -74,6 +74,12 @@
         android:label="Dialog"
         tools:layout="@layout/fragment_custom_dialog" />
 
+
     <include app:graph="@navigation/second_nav_graph" />
+    <fragment
+        android:id="@+id/roomDbFragment"
+        android:name="com.example.atl_unec2.room.RoomDbFragment"
+        android:label="fragment_room_db"
+        tools:layout="@layout/fragment_room_db" />
 
 </navigation>
