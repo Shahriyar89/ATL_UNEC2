@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav_graph"
-    app:startDestination="@id/roomDbFragment">
+    app:startDestination="@id/multipartFragment">
 
 
     <action
@@ -78,8 +78,28 @@
     <include app:graph="@navigation/second_nav_graph" />
     <fragment
         android:id="@+id/roomDbFragment"
-        android:name="com.example.atl_unec2.room.RoomDbFragment"
+        android:name="com.example.atl_unec2.room.lesson.RoomDbFragment"
         android:label="fragment_room_db"
         tools:layout="@layout/fragment_room_db" />
+    <fragment
+        android:id="@+id/retrofitImplFragment"
+        android:name="com.example.atl_unec2.network.RetrofitImplFragment"
+        android:label="fragment_retrofit_impl"
+        tools:layout="@layout/fragment_retrofit_impl" />
+    <fragment
+        android:id="@+id/signUpInFragment"
+        android:name="com.example.atl_unec2.room.sign_in_up.view.SignUpInFragment"
+        android:label="fragment_sign_up_in"
+        tools:layout="@layout/fragment_sign_up_in" />
+    <fragment
+        android:id="@+id/coroutinesFragment"
+        android:name="com.example.atl_unec2.coroutines.CoroutinesFragment"
+        android:label="fragment_coroutines"
+        tools:layout="@layout/fragment_coroutines" />
+    <fragment
+        android:id="@+id/multipartFragment"
+        android:name="com.example.atl_unec2.network.practical.MultipartFragment"
+        android:label="fragment_multipart"
+        tools:layout="@layout/fragment_multipart" />
 
 </navigation>

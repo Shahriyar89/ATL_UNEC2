@@ -1,4 +1,4 @@
-package com.example.atl_unec2.room
+package com.example.atl_unec2.room.lesson
 
 import android.content.Context
 import android.os.Bundle
@@ -7,9 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.atl_unec2.R
-import com.example.atl_unec2.databinding.FragmentRecyclerPagerViewBinding
 import com.example.atl_unec2.databinding.FragmentRoomDbBinding
+import com.example.atl_unec2.room.sign_in_up.db.MyDatabase
 
 class RoomDbFragment : Fragment() {
     private var _binding: FragmentRoomDbBinding? = null

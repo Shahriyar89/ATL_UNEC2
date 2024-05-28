@@ -1,4 +1,4 @@
-package com.example.atl_unec2.room
+package com.example.atl_unec2.room.lesson
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

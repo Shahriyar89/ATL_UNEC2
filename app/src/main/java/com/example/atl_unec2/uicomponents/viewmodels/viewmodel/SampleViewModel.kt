@@ -5,9 +5,18 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.plus
 
 class SampleViewModel(private val savedStateHandle: SavedStateHandle): ViewModel() {
 
+
+    val job= CoroutineScope(Dispatchers.Default) + Job()
 
 
     //set oluna bilen data
@@ -31,7 +40,17 @@ class SampleViewModel(private val savedStateHandle: SavedStateHandle): ViewModel
     }
 
 
-    fun getQuery()=savedStateHandle.get<String>("query")
+     fun getQuery()=savedStateHandle.get<String>("query")
+
+
+    fun getAllUser(){
+        viewModelScope.launch(Dispatchers.IO) {
+//call api
+        }
+
+
+
+    }
 
 
     override fun onCleared() {
