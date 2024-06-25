@@ -54,6 +54,7 @@ class RetrofitImplFragment : Fragment() {
     private fun fetchDataFromApi() {
         val dogService = RetrofitHelper.getInstance().create(MyServices::class.java)
         val callService = dogService.fetchData()
+
         callService.enqueue(object : Callback<DogModel> {
             override fun onResponse(call: Call<DogModel>, response: Response<DogModel>) {
                 if (response.isSuccessful) {

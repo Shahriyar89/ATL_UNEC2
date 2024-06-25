@@ -1,5 +1,6 @@
 package com.example.atl_unec2.uicomponents.activities
 
+import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -12,8 +13,12 @@ import com.example.atl_unec2.uicomponents.fragments.ProductFragment
 import com.example.atl_unec2.uicomponents.dialogs.OthersFragment
 import com.example.atl_unec2.uicomponents.practical.practical7.HomeFragment
 import com.example.atl_unec2.uicomponents.recyclerview.ViewPagerFragment
+import dagger.hilt.android.AndroidEntryPoint
 
 
+
+
+@AndroidEntryPoint
 class FragmentViewActivity : AppCompatActivity() {
     lateinit var binding: ActivityFragmentViewBinding
 

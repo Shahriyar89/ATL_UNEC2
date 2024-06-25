@@ -1,18 +1,15 @@
 package com.example.atl_unec2.uicomponents.viewmodels
 
-import android.database.Observable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModelProvider
-import com.example.atl_unec2.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.atl_unec2.databinding.ActivitySampleBinding
 import com.example.atl_unec2.uicomponents.viewmodels.viewmodel.SampleViewModel
-import com.example.atl_unec2.uicomponents.viewmodels.viewmodel.SampleViewModelFactory
 import com.example.atl_unec2.uicomponents.viewmodels.viewmodel.SecondViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SampleActivity : AppCompatActivity() {
 
     private  val  viewModel: SampleViewModel by viewModels()

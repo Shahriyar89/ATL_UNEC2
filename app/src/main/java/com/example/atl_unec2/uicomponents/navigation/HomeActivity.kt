@@ -9,7 +9,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import com.example.atl_unec2.R
 import com.example.atl_unec2.databinding.ActivityHome2Binding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityHome2Binding
@@ -59,9 +61,9 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    override fun onNewIntent(intent: Intent?) {
-        super.onNewIntent(intent)
-        (supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment).navController.handleDeepLink(intent)
-    }
+//    override fun onNewIntent(intent: Intent?) {
+//        super.onNewIntent(intent)
+//        (supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment).navController.handleDeepLink(intent)
+//    }
 
 }

@@ -4,7 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.atl_unec2.databinding.ActivityLoginBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
 
     companion object {
@@ -24,17 +27,17 @@ class LoginActivity : AppCompatActivity() {
 
 
     private fun checkLogin() {
-        with(binding) {
-            val inputName = userName.text.toString()
-            val inputPassword = password.text.toString()
-            if (inputName == USER_NAME && inputPassword == PASSWORD) {
-                val intent = Intent(this@LoginActivity, HomeActivity::class.java)
-                intent.also {
-                    it.putExtra("NAME", inputName)
-                    it.putExtra("PASSWORD", inputPassword)
-                }
-                startActivity(intent)
-            }
-        }
+//        with(binding) {
+//            val inputName = userName.text.toString()
+//            val inputPassword = password.text.toString()
+//            if (inputName == USER_NAME && inputPassword == PASSWORD) {
+//                val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+//                intent.also {
+//                    it.putExtra("NAME", inputName)
+//                    it.putExtra("PASSWORD", inputPassword)
+//                }
+//                startActivity(intent)
+//            }
+//        }
     }
 }

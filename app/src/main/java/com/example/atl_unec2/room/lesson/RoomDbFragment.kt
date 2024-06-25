@@ -63,26 +63,26 @@ class RoomDbFragment : Fragment() {
     }
 
 
-    private fun setRoomDb() {
-        val db: CustomRoomDao = MyDatabase.getInstance(requireContext())?.userDao()!!
-
-        binding.addUser.setOnClickListener {
-
-            //insert to db
-            db.insertAll(User(4, firstName = "Elvin", lastName = "Alizade"))
-            db.insertAll(User(5, firstName = "Vusel", lastName = "Ceferli"))
-            db.insertAll(User(6, firstName = "Teymur", lastName = "Mammadov"))
-
-            //get all User list from db
-            val userList = db.getAllUser()
-            Toast.makeText(requireContext(), "${userList.size}", Toast.LENGTH_SHORT).show()
-
-
-            //update user in db
-            db.updateUser((User(4, firstName = "ELVIN", lastName = "ALIZADE")))
-
-            //delete from db
-            db.delete(User(5, firstName = "Vusel", lastName = "Ceferli"))
-        }
-    }
+//    private fun setRoomDb() {
+//        val db: CustomRoomDao = MyDatabase.getInstance(requireContext())?.userDao()!!
+//
+//        binding.addUser.setOnClickListener {
+//
+//            //insert to db
+//            db.insertAll(User(4, firstName = "Elvin", lastName = "Alizade"))
+//            db.insertAll(User(5, firstName = "Vusel", lastName = "Ceferli"))
+//            db.insertAll(User(6, firstName = "Teymur", lastName = "Mammadov"))
+//
+//            //get all User list from db
+//            val userList = db.getAllUser()
+//            Toast.makeText(requireContext(), "${userList.size}", Toast.LENGTH_SHORT).show()
+//
+//
+//            //update user in db
+//            db.updateUser((User(4, firstName = "ELVIN", lastName = "ALIZADE")))
+//
+//            //delete from db
+//            db.delete(User(5, firstName = "Vusel", lastName = "Ceferli"))
+//        }
+//    }
 }

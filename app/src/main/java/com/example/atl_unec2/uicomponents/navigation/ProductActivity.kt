@@ -7,7 +7,9 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.atl_unec2.R
 import com.example.atl_unec2.databinding.ActivityHome2Binding
 import com.example.atl_unec2.databinding.ActivityProductBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ProductActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityProductBinding

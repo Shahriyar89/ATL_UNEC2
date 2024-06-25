@@ -6,7 +6,11 @@ import androidx.databinding.DataBindingUtil
 import com.example.atl_unec2.R
 import com.example.atl_unec2.databinding.ActivitySecondBinding
 import com.example.atl_unec2.uicomponents.fragments.UserInfo
+import dagger.hilt.android.AndroidEntryPoint
 
+
+
+@AndroidEntryPoint
 class SecondActivity : AppCompatActivity() {
 
     lateinit var binding : ActivitySecondBinding

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav_graph"
-    app:startDestination="@id/multipartFragment">
+    app:startDestination="@id/hiltTestFragment">
 
 
     <action
@@ -101,5 +101,21 @@
         android:name="com.example.atl_unec2.network.practical.MultipartFragment"
         android:label="fragment_multipart"
         tools:layout="@layout/fragment_multipart" />
+    <fragment
+        android:id="@+id/kotlinFlowFragment"
+        android:name="com.example.atl_unec2.coroutines.flow.KotlinFlowFragment"
+        android:label="kotlinFlowFragment"
+        tools:layout="@layout/fragment_kotlin_flow" />
+    <fragment
+        android:id="@+id/kotlinFlowsFragment"
+        android:name="com.example.atl_unec2.coroutines.KotlinFlowsFragment"
+        android:label="fragment_kotlin_flows"
+        tools:layout="@layout/fragment_kotlin_flows" />
+
+    <fragment
+        android:id="@+id/hiltTestFragment"
+        android:name="com.example.atl_unec2.di.TestHiltFragment"
+        android:label="TestHiltFragment"
+        tools:layout="@layout/fragment_test_hilt" />
 
 </navigation>

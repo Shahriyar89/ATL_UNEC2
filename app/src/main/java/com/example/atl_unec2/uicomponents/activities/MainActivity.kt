@@ -8,7 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import com.example.atl_unec2.R
 import com.example.atl_unec2.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     var binding: ActivityMainBinding? = null

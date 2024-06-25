@@ -1,54 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
-<application
-    android:allowBackup="true"
-    android:dataExtractionRules="@xml/data_extraction_rules"
-    android:fullBackupContent="@xml/backup_rules"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher_round"
-    android:supportsRtl="true"
-    android:theme="@style/Theme.ATL_UNEC2"
-    tools:targetApi="31">
-    <activity
-        android:name=".uicomponents.navigation.ProductActivity"
-        android:exported="false">
-        <nav-graph android:value="@navigation/product_nav_graph" />
-    </activity>
-    <!-- <activity -->
-    <!-- android:name=".activityandfragment.navigation.HomeActivity" -->
-    <!-- android:exported="false" /> -->
-    <activity
-        android:name=".uicomponents.practical.HomeActivity"
-        android:exported="false" />
-    <activity
-        android:name=".uicomponents.practical.LoginActivity"
-        android:exported="false" />
-<!--    <activity-->
-<!--        android:name="com.example.atl_unec2.uicomponents.viewmodels.SampleActivity"-->
-<!--        android:exported="false"-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
-<!--        />-->
-    <activity
-        android:name=".uicomponents.activities.MainActivity"
-        android:exported="false" /> <!-- <activity -->
-    <!-- android:name=".activities.SecondActivity" -->
-    <!-- android:exported="false" /> -->
-    <activity
-        android:name=".uicomponents.navigation.HomeActivity"
-        android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+    <application
+        android:name=".di.hilt.TestApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ATL_UNEC2"
+        tools:targetApi="31">
+        <!--    <activity-->
+        <!--        android:name="com.example.atl_unec2.sevice.ServicesActivity"-->
+        <!--        android:exported="false" />-->
+        <!--    <activity-->
+        <!--        android:name=".uicomponents.navigation.ProductActivity"-->
+        <!--        android:exported="false">-->
+        <!--        <nav-graph android:value="@navigation/product_nav_graph" />-->
+        <!--    </activity>-->
+        <!-- <activity -->
+        <!-- android:name=".activityandfragment.navigation.HomeActivity" -->
+        <!-- android:exported="false" /> -->
+        <!--    <activity-->
+        <!--        android:name=".uicomponents.practical.LoginActivity"-->
+        <!--        android:exported="false" />-->
+        <!--    <activity-->
+        <!--        android:name="com.example.atl_unec2.uicomponents.viewmodels.SampleActivity"-->
+        <!--        android:exported="false"-->
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+        <!--        />-->
+        <!--    <activity-->
+        <!--        android:name=".uicomponents.activities.MainActivity"-->
+        <!--        android:exported="false" /> &lt;!&ndash; <activity &ndash;&gt;-->
+        <!-- android:name=".activities.SecondActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".sevice.ServicesActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <nav-graph android:value="@navigation/my_nav_graph" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
-    </activity>
-</application>
+            <nav-graph android:value="@navigation/my_nav_graph" />
+
+        </activity>
+
+        <service android:name=".sevice.BackgroundService" />
+        <service android:name=".sevice.ForegroundService" />
+    </application>
 
 </manifest>

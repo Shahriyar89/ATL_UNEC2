@@ -1,25 +1,20 @@
 package com.example.atl_unec2.coroutines
 
+import android.content.Context
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.atl_unec2.R
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
+import com.example.atl_unec2.coroutines.network.MoviesViewModel
+import com.example.atl_unec2.coroutines.network.Resource
 import com.example.atl_unec2.databinding.FragmentCoroutinesBinding
-import com.example.atl_unec2.databinding.FragmentRetrofitImplBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.plus
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
 
 /**
@@ -53,12 +48,23 @@ import kotlinx.coroutines.withContext
  *
  */
 
-class CoroutinesFragment : Fragment() {
+
+class CoroutinesFragment: Fragment() {
+
+
 
     private var _binding: FragmentCoroutinesBinding? = null
     private val binding get() = _binding!!
 
-    val job = CoroutineScope(Dispatchers.Main) + Job()
+//    val job = CoroutineScope(Dispatchers.Main) + Job()
+
+    val viewModel: MoviesViewModel by viewModels()
+
+
+
+
+//    @Inject
+//    lateinit var alert:AlertSystem
 
 
     private val MY_TAG = "MyTag"
@@ -74,6 +80,54 @@ class CoroutinesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+//        viewModel.getPopularMovies()
+        viewModel.getPlayMovies()
+        viewModel.getPlayMoviesFlow()
+
+
+        lifecycleScope.launch {
+            viewModel.moviesDataFlow
+                .collect{
+                when(it){
+                    is Resource.Loading->{
+                        binding.progressBar.visibility = View.VISIBLE
+                    }
+                    is Resource.Error->{}
+                    is Resource.Success->{
+                        Toast.makeText(requireContext(), "Ugurlu", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
+
+
+
+
+        lifecycleScope.launch {
+            viewModel.moviesFlowData.collect {
+                when (it) {
+                    is Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
+                    is Resource.Success -> {
+                        binding.progressBar.visibility = View.GONE
+                        Toast.makeText(requireContext(), "Ugurlu", Toast.LENGTH_SHORT).show()
+                    }
+
+                    else -> {
+                        binding.progressBar.visibility = View.GONE
+                        Toast.makeText(requireContext(), "Xeta bas verdi", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                }
+            }
+        }
+
+
+//
+//        val repository=MovieRepository()
+//       CoroutineScope(Dispatchers.IO).launch {
+//           repository.getPlayNowMovies()
+//       }
 //        workWithJob()
 
 
@@ -102,7 +156,6 @@ class CoroutinesFragment : Fragment() {
 //        runBlocking (Dispatchers.Main){
 ////            binding.exampleText.text="Hello students"
 //        }
-
 
 
 //
