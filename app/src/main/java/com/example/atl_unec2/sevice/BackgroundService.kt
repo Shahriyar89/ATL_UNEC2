@@ -11,7 +11,7 @@ class BackgroundService :Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Thread {
             while (true) {
-                Log.e("Service", "Background service is running...")
+                Log.e("BG_SERVICE", "Background service is running...")
                 try {
                     Thread.sleep(2000)
                 } catch (e: InterruptedException) {
@@ -28,6 +28,8 @@ class BackgroundService :Service() {
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e("Service", "Background service is destroyed")
+        Log.e("BG_SERVICE", "Background service is destroyed")
     }
 }
+
+

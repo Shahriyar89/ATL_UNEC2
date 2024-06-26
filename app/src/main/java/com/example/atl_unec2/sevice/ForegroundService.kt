@@ -13,26 +13,6 @@ import com.example.atl_unec2.R
 
 
 class ForegroundService :Service() {
-//    override fun onBind(p0: Intent?): IBinder? {
-//        return null
-//    }
-//
-//    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-//        Thread {
-//            while (true) {
-//                Log.e("Service", "Foreground service is running...")
-//                try {
-//                    Thread.sleep(2000)
-//                } catch (e: InterruptedException) {
-//                    e.printStackTrace()
-//                }
-//            }
-//        }.start()
-//        return super.onStartCommand(intent, flags, startId)
-//
-//    }
-
-
 
     private val CHANNEL_ID = "ForegroundServiceChannel"
 
@@ -42,12 +22,14 @@ class ForegroundService :Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+
+
         val notification: Notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("Foreground Service")
             .setContentText("Foreground service is running")
             .setSmallIcon(R.drawable.baseline_home_24)
             .build()
-
+//
         startForeground(1, notification)
 
         // Do heavy work on a background thread
@@ -75,5 +57,9 @@ class ForegroundService :Service() {
             val manager: NotificationManager = getSystemService(NotificationManager::class.java)
             manager.createNotificationChannel(serviceChannel)
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 }

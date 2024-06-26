@@ -22,12 +22,13 @@ class ServicesActivity : AppCompatActivity() {
 
 //        val backgroundService = Intent(this, BackgroundService::class.java)
 //        startService(backgroundService)
+//
+        val foregroundService=Intent(this,ForegroundService::class.java)
+        startService(foregroundService)
 
-//        val foregroundService=Intent(this,ForegroundService::class.java)
-//        startService(foregroundService)
 
+//        registerReceiver(airplaneModeReceiver, IntentFilter(Intent.ACTION_BATTERY_LOW))
 
-//        registerReceiver(airplaneModeReceiver, IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED))
 //        registerReceiver(testReceiver, IntentFilter("ACTION_TEST"))
 
         binding.sendBroadcast.setOnClickListener {
