@@ -7,6 +7,7 @@ object TestSingleton {
     const val name1: String = "Ahmad"
 
 
+
     /**
      * Kotlinle bagli
      * OOP əsaslarını class lardan əvvəl keçirilməli
