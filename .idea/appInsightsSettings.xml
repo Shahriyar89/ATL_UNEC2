@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.atl_unec2" />
+                  <option name="mobileSdkAppId" value="1:554343704966:android:49e9edc89eba5d62caa407" />
+                  <option name="projectId" value="atl-unec" />
+                  <option name="projectNumber" value="554343704966" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/clientsFragment"
-        android:name="com.example.atl_unec2.uicomponents.practical.practical7.ClientsFragment"
+        android:name="com.example.atl_unec.uicomponents.practical.practical7.ClientsFragment"
         android:label="fragment_clients"
         tools:layout="@layout/fragment_clients" />
 </navigation>

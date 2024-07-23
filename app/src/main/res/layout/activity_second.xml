@@ -6,11 +6,11 @@
 
         <variable
             name="user"
-            type="com.example.atl_unec2.uicomponents.fragments.UserInfo" />
+            type="com.example.atl_unec.uicomponents.fragments.UserInfo" />
 
         <variable
             name="activity"
-            type="com.example.atl_unec2.uicomponents.activities.SecondActivity" />
+            type="com.example.atl_unec.uicomponents.activities.SecondActivity" />
 
         <import type="android.view.View" />
     </data>

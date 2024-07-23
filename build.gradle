@@ -16,4 +16,83 @@ plugins {
     id 'com.android.library' version '7.3.1' apply false
     id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
     id 'androidx.room' version '2.6.1' apply false
+    id 'com.google.gms.google-services' version '4.4.2' apply false
+    id 'com.google.firebase.crashlytics' version '3.0.2' apply false
 }
+//
+//task helloWorld() {
+//
+//    doFirst {
+//        println 'Hello world First'
+//    }
+//        println 'Hello world'
+//
+//    doLast{
+//        println 'Hello world Last '
+//    }
+//}
+
+//
+//task helloWorld() {
+//    10.times { i ->
+//        tasks.register("task$i") {
+//            println("Hello from task$i")
+//        }
+//    }
+//
+//    tasks.named("task2") {
+//        dependsOn "task3", "task5", "task7"
+//    }
+//}
+//
+//    dependsOn "task1"
+////}
+
+
+//task copyApk(type: Copy) {
+//    // Specify the build variant
+//    def buildVariant = "release"
+//
+//    // Source APK location
+//    def apkPath = "$buildDir/outputs/apk/$buildVariant/app-debug.apk"
+//
+//    // Destination directory
+//    def destinationDir = file("$rootDir/example")
+//
+//    from apkPath
+//    into destinationDir
+//}
+//
+//// Ensure copyApk runs after assembleRelease
+//tasks.whenTaskAdded { task ->
+//    if (task.name == "assembleRelease") {
+//        task.finalizedBy(copyApk)
+//    }
+//}
+
+
+
+//task copyApk(type: Copy) {
+//    // Specify the build variant
+//    def buildVariant = "debug"  // Change to "debug" if you want the debug APK
+//
+//    // Source APK location
+//    def apkPath = "$buildDir/intermediates/apk/debug/app-debug.apk"
+//
+//    // Destination directory
+//    def destinationDir = file("$rootDir/example")  // Change to your desired directory
+//
+//    from apkPath
+//    into destinationDir
+//}
+//
+//
+//
+//tasks.whenTaskAdded {task->
+//    if (task.name=="assembleDebug"){
+//        task.finalizedBy "copyApk"
+//    }
+//}
+//
+
+

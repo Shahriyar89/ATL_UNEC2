@@ -1,0 +1,13 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item
+        android:drawable="@drawable/baseline_home_24"
+        android:duration="1000" />
+    <item
+        android:drawable="@drawable/baseline_attach_money_24"
+        android:duration="1000" />
+    <item
+        android:drawable="@drawable/baseline_search_24"
+        android:duration="1000" />
+    <!-- Add more frames as needed -->
+</animation-list>

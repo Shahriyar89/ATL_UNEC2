@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.atl_unec2.uicomponents.viewmodels.viewmodel.SampleFragment"
+        android:name="com.example.atl_unec.uicomponents.viewmodels.viewmodel.SampleFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <deepLink
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/productFragment"
-        android:name="com.example.atl_unec2.uicomponents.fragments.ProductFragment"
+        android:name="com.example.atl_unec.uicomponents.fragments.ProductFragment"
         android:label="ProductFragment">
         <action
             android:id="@+id/action_productFragment_to_settingFragment"
@@ -45,7 +45,7 @@
 
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.example.atl_unec2.uicomponents.fragments.Example2Fragment"
+        android:name="com.example.atl_unec.uicomponents.fragments.Example2Fragment"
         android:label="ExampleFragment2">
         <action
             android:id="@+id/action_settingFragment_to_myFragment"
@@ -53,13 +53,13 @@
     </fragment>
     <fragment
         android:id="@+id/othersFragment"
-        android:name="com.example.atl_unec2.uicomponents.dialogs.OthersFragment"
+        android:name="com.example.atl_unec.uicomponents.dialogs.OthersFragment"
         android:label="fragment_others"
         tools:layout="@layout/fragment_others" />
 
     <fragment
         android:id="@+id/myFragment"
-        android:name="com.example.atl_unec2.uicomponents.fragments.FirstFragment"
+        android:name="com.example.atl_unec.uicomponents.fragments.FirstFragment"
         android:label="fragment_others"
         tools:layout="@layout/fragment_first">
         <deepLink
@@ -70,7 +70,7 @@
 
     <dialog
         android:id="@+id/myCustomDialog"
-        android:name="com.example.atl_unec2.uicomponents.dialogs.CustomDialogFragment"
+        android:name="com.example.atl_unec.uicomponents.dialogs.CustomDialogFragment"
         android:label="Dialog"
         tools:layout="@layout/fragment_custom_dialog" />
 
@@ -78,43 +78,43 @@
     <include app:graph="@navigation/second_nav_graph" />
     <fragment
         android:id="@+id/roomDbFragment"
-        android:name="com.example.atl_unec2.room.lesson.RoomDbFragment"
+        android:name="com.example.atl_unec.room.lesson.RoomDbFragment"
         android:label="fragment_room_db"
         tools:layout="@layout/fragment_room_db" />
     <fragment
         android:id="@+id/retrofitImplFragment"
-        android:name="com.example.atl_unec2.network.RetrofitImplFragment"
+        android:name="com.example.atl_unec.network.RetrofitImplFragment"
         android:label="fragment_retrofit_impl"
         tools:layout="@layout/fragment_retrofit_impl" />
     <fragment
         android:id="@+id/signUpInFragment"
-        android:name="com.example.atl_unec2.room.sign_in_up.view.SignUpInFragment"
+        android:name="com.example.atl_unec.room.sign_in_up.view.SignUpInFragment"
         android:label="fragment_sign_up_in"
         tools:layout="@layout/fragment_sign_up_in" />
     <fragment
         android:id="@+id/coroutinesFragment"
-        android:name="com.example.atl_unec2.coroutines.CoroutinesFragment"
+        android:name="com.example.atl_unec.coroutines.CoroutinesFragment"
         android:label="fragment_coroutines"
         tools:layout="@layout/fragment_coroutines" />
     <fragment
         android:id="@+id/multipartFragment"
-        android:name="com.example.atl_unec2.network.practical.MultipartFragment"
+        android:name="com.example.atl_unec.network.practical.MultipartFragment"
         android:label="fragment_multipart"
         tools:layout="@layout/fragment_multipart" />
     <fragment
         android:id="@+id/kotlinFlowFragment"
-        android:name="com.example.atl_unec2.coroutines.flow.KotlinFlowFragment"
+        android:name="com.example.atl_unec.coroutines.flow.KotlinFlowFragment"
         android:label="kotlinFlowFragment"
         tools:layout="@layout/fragment_kotlin_flow" />
     <fragment
         android:id="@+id/kotlinFlowsFragment"
-        android:name="com.example.atl_unec2.coroutines.KotlinFlowsFragment"
+        android:name="com.example.atl_unec.coroutines.KotlinFlowsFragment"
         android:label="fragment_kotlin_flows"
         tools:layout="@layout/fragment_kotlin_flows" />
 
     <fragment
         android:id="@+id/hiltTestFragment"
-        android:name="com.example.atl_unec2.di.TestHiltFragment"
+        android:name="com.example.atl_unec.di.TestHiltFragment"
         android:label="TestHiltFragment"
         tools:layout="@layout/fragment_test_hilt" />
 

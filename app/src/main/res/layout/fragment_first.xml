@@ -3,7 +3,7 @@
     <data>
         <variable
             name="data"
-            type="com.example.atl_unec2.TestSingleton" />
+            type="com.example.atl_unec.TestSingleton" />
     </data>
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"

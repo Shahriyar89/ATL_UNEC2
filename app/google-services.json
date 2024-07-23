@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "554343704966",
+    "project_id": "atl-unec",
+    "storage_bucket": "atl-unec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554343704966:android:49e9edc89eba5d62caa407",
+        "android_client_info": {
+          "package_name": "com.example.atl_unec2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmqvzne5499PV_N7HUYXBCkZb4HpGDwys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -3,6 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 
 
 }
@@ -16,8 +18,8 @@ android {
         applicationId "com.example.atl_unec2"
         minSdk 24
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "3.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -36,7 +38,44 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+//        beta {
+//            minifyEnabled false
+//            applicationIdSuffix ".beta"
+//            signingConfig signingConfigs.debug
+//        }
     }
+
+
+//    flavorDimensions = ["free", "paid"]
+//    flavorDimensions "version"
+//    productFlavors{
+//        free {
+//            dimension "version"
+//            applicationIdSuffix ".free"
+//            versionNameSuffix "-free"
+//        }
+//
+//        paid {
+//            dimension "version"
+//            applicationIdSuffix ".paid"
+//            versionNameSuffix "-paid"
+//        }
+//
+//
+//        us {
+//            dimension "market"
+//            resValue "string", "app_name", "MyApp US"
+//        }
+//
+//        eu {
+//            dimension "market"
+//            resValue "string", "app_name", "MyApp EU"
+//        }
+//
+//
+//
+//    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -45,6 +84,8 @@ android {
         jvmTarget = '17'
 
     }
+
+
 }
 
 kapt {
@@ -54,6 +95,15 @@ kapt {
 
 dependencies {
     implementation 'androidx.activity:activity:1.9.0'
+    implementation 'com.google.firebase:firebase-crashlytics:19.0.2'
+    implementation 'com.google.firebase:firebase-analytics:22.0.2'
+    implementation 'com.google.firebase:firebase-config:22.0.0'
+    implementation 'com.google.firebase:firebase-auth:23.0.0'
+    implementation 'com.google.firebase:firebase-firestore:25.0.0'
+    implementation 'com.google.firebase:firebase-messaging:24.0.0'
+    implementation 'com.google.firebase:firebase-database:21.0.0'
+
+
     def fragment_version = "1.6.2"
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -107,5 +157,9 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    def work_version = "2.7.1"
+    implementation("androidx.work:work-runtime-ktx:$work_version")
+    implementation "androidx.dynamicanimation:dynamicanimation: 1.0.0"
 }
 

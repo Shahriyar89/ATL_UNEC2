@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/productFragment2"
-        android:name="com.example.atl_unec2.uicomponents.fragments.ProductFragment"
+        android:name="com.example.atl_unec.uicomponents.fragments.ProductFragment"
         android:label="ProductFragment" >
         <deepLink
             android:id="@+id/productDeeplink"
